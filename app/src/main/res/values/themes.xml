@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Telegram" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#179CDE</item>
+        <item name="colorSecondary">#0088CC</item>
+    </style>
+
+    <style name="Theme.Telegram" parent="Base.Theme.Telegram"/>
+</resources>

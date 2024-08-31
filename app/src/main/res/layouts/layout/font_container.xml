@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/font_container"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/rounded_textedit"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="500dp">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/login"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="1dp"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/email"
+    />
+
+    <EditText
+            android:text=""
+            android:id="@+id/email_text_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_textedit"
+    />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/password"
+    />
+
+    <EditText
+            android:text=""
+            android:padding="10dp"
+            android:id="@+id/password_text_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_textedit"
+            android:importantForAutofill="no"
+    />
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:text="@string/login"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+    />
+
+</LinearLayout>

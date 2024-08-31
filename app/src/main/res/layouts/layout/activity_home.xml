@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:layout_anchorGravity="center"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:background="#f3f1f7"
+                android:gravity="center"
+                android:elevation="0dp"
+                app:contentInsetStart="0dp"
+                android:layout_height="?android:attr/actionBarSize">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="15"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/logout"
+                        android:clickable="true"
+                        android:text="@string/logout"
+                        android:textSize="16sp"
+                        android:layout_weight="2"
+                        android:textFontWeight="600"
+                        android:textStyle="bold"
+                        android:layout_width="0dp"
+                        android:textColor="#0088CC"
+                        android:layout_height="wrap_content"
+                />
+
+                <TextView
+                        android:text="@string/chats"
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_weight="11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                />
+
+                <TextView
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/search_ic"
+                        app:boxBackgroundMode="none"
+                        app:hintEnabled="false"
+                        app:startIconTint="@color/black"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:hint="Search"
+                            android:paddingStart="40dp"
+                            android:id="@+id/searchEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:imeOptions="actionSearch" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/user_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <ProgressBar
+            android:id="@+id/loading_list_user"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateTint="#0088CC"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+    />
+
+</RelativeLayout>

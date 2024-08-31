@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/icon_image"
+                android:src="@drawable/icons"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+
+        <TextView
+                android:text="Wellcome Back!"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView"/>
+
+        <TextView
+                android:text="Enter your username and password to login"
+                android:textSize="18sp"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+<!--login-->
+
+        <ViewFlipper
+                android:id="@+id/flipview"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+        />
+
+
+<!--Register-->
+
+
+
+        <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/flip_textview"
+                android:text="@string/register_click_able"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
